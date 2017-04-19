@@ -1,9 +1,14 @@
-# api documentation for  [sqs-consumer (v3.5.0)](https://github.com/BBC/sqs-consumer)  [![npm package](https://img.shields.io/npm/v/npmdoc-sqs-consumer.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-sqs-consumer) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-sqs-consumer.svg)](https://travis-ci.org/npmdoc/node-npmdoc-sqs-consumer)
+# npmdoc-sqs-consumer
+
+#### api documentation for  [sqs-consumer (v3.5.0)](https://github.com/BBC/sqs-consumer)  [![npm package](https://img.shields.io/npm/v/npmdoc-sqs-consumer.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-sqs-consumer) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-sqs-consumer.svg)](https://travis-ci.org/npmdoc/node-npmdoc-sqs-consumer)
+
 #### Build SQS-based Node applications without the boilerplate
 
-[![NPM](https://nodei.co/npm/sqs-consumer.png?downloads=true)](https://www.npmjs.com/package/sqs-consumer)
+[![NPM](https://nodei.co/npm/sqs-consumer.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/sqs-consumer)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-sqs-consumer/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-sqs-consumer%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sqs-consumer/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-sqs-consumer/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-sqs-consumer/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-sqs-consumer/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-sqs-consumer/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-sqs-consumer/build/screenCapture.npmPackageListing.svg)
 
@@ -65,13 +70,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "ibl",
-            "email": "ibl-team@lists.forge.bbc.co.uk"
+            "name": "ibl"
         }
     ],
     "name": "sqs-consumer",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/BBC/sqs-consumer.git"
@@ -85,57 +88,6 @@
     },
     "version": "3.5.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module sqs-consumer](#apidoc.module.sqs-consumer)
-1.  [function <span class="apidocSignatureSpan">sqs-consumer.</span>create (options)](#apidoc.element.sqs-consumer.create)
-1.  [function <span class="apidocSignatureSpan">sqs-consumer.</span>super_ ()](#apidoc.element.sqs-consumer.super_)
-
-
-
-# <a name="apidoc.module.sqs-consumer"></a>[module sqs-consumer](#apidoc.module.sqs-consumer)
-
-#### <a name="apidoc.element.sqs-consumer.create"></a>[function <span class="apidocSignatureSpan">sqs-consumer.</span>create (options)](#apidoc.element.sqs-consumer.create)
-- description and source-code
-```javascript
-create = function (options) {
-  return new Consumer(options);
-}
-```
-- example usage
-```shell
-...
-'''
-
-## Usage
-
-'''js
-const Consumer = require('sqs-consumer');
-
-const app = Consumer.create({
-  queueUrl: 'https://sqs.eu-west-1.amazonaws.com/account-id/queue-name',
-  handleMessage: (message, done) => {
-    // do some work with 'message'
-    done();
-  }
-});
-...
-```
-
-#### <a name="apidoc.element.sqs-consumer.super_"></a>[function <span class="apidocSignatureSpan">sqs-consumer.</span>super_ ()](#apidoc.element.sqs-consumer.super_)
-- description and source-code
-```javascript
-function EventEmitter() {
-  EventEmitter.init.call(this);
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
