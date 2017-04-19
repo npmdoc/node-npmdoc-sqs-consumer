@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.sqs-consumer.sqs-consumer">
+            function <span class="apidocSignatureSpan"></span>sqs-consumer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.sqs-consumer.create">
             function <span class="apidocSignatureSpan">sqs-consumer.</span>create
             <span class="apidocSignatureSpan">(options)</span>
@@ -85,6 +94,38 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sqs-consumer" id="apidoc.module.sqs-consumer">module sqs-consumer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sqs-consumer.sqs-consumer" id="apidoc.element.sqs-consumer.sqs-consumer">
+        function <span class="apidocSignatureSpan"></span>sqs-consumer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Consumer(options) {
+  validate(options);
+
+  this.queueUrl = options.queueUrl;
+  this.handleMessage = options.handleMessage;
+  this.attributeNames = options.attributeNames || [];
+  this.messageAttributeNames = options.messageAttributeNames || [];
+  this.stopped = true;
+  this.batchSize = options.batchSize || 1;
+  this.visibilityTimeout = options.visibilityTimeout;
+  this.waitTimeSeconds = options.waitTimeSeconds || 20;
+  this.authenticationErrorTimeout = options.authenticationErrorTimeout || 10000;
+
+  this.sqs = options.sqs || new AWS.SQS({
+    region: options.region || process.env.AWS_REGION || &#x27;eu-west-1&#x27;
+  });
+
+  this._handleSqsResponseBound = this._handleSqsResponse.bind(this);
+  this._processMessageBound = this._processMessage.bind(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
